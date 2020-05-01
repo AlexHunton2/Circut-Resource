@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Drill.gd" type="Script" id=1]
+[ext_resource path="res://drill.png" type="Texture" id=2]
+
+[node name="Drill" type="Area2D"]
+position = Vector2( 954, 107 )
+script = ExtResource( 1 )
+
+[node name="drill" type="Sprite" parent="."]
+position = Vector2( 1, 1.99994 )
+rotation = 0.760963
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( -776, -129 )
+polygon = PoolVector2Array( 758.247, 173.352, 735.098, 163.921, 738.527, 108.191, 765.106, 79.0406, 804.545, 93.616, 823.407, 134.77, 795.114, 164.778 )
+[connection signal="area_entered" from="." to="." method="_on_Drill_area_entered"]

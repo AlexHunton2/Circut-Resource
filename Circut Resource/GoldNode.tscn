@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Gold Node.gd" type="Script" id=1]
+[ext_resource path="res://goldore.png" type="Texture" id=2]
+
+[node name="Gold Node" type="Area2D"]
+position = Vector2( 693, 204 )
+scale = Vector2( 1.2, 1.2 )
+script = ExtResource( 1 )
+
+[node name="goldore" type="Sprite" parent="."]
+position = Vector2( -14.1667, 36.6667 )
+scale = Vector2( 1.66667, 1.66667 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -57, 74, -16, 78, -3, 69, 27, 72, 25, 56, 13, 37, 13, 26, 1, -6, -36, 30 )
+[connection signal="area_entered" from="." to="." method="_on_Gold_Node_area_entered"]
